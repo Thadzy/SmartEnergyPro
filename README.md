@@ -6,11 +6,11 @@ This project aims to provide real-time monitoring of your electrical power consu
 
 ## Components
 
-* **Arduino ESP32** (image: [https://static.cytron.io/image/cache/catalog/products/NODEMCU-ESP32/NODEMCU-ESP32-800x800.jpg])
-* **PZEM-004T Sensor** (image: [https://esphome.io/_images/pzem-ac.png])
+* **Arduino ESP32** ![Project Image](https://static.cytron.io/image/cache/catalog/products/NODEMCU-ESP32/NODEMCU-ESP32-800x800.jpg)
+* **PZEM-004T Sensor** ![Project Image](https://esphome.io/_images/pzem-ac.png)
 
 ## Hardware Architecture
-(image: [https://media.discordapp.net/attachments/821655672536956942/1216679242377592912/image.png?ex=660143d8&is=65eeced8&hm=4552127bcd29e7637fd6b3d2e51fd5b18390aca26f4b10faad2593fbad6f33d7&=&format=webp&quality=lossless&width=1052&height=662])
+![image](https://media.discordapp.net/attachments/821655672536956942/1216679242377592912/image.png?ex=660143d8&is=65eeced8&hm=4552127bcd29e7637fd6b3d2e51fd5b18390aca26f4b10faad2593fbad6f33d7&=&format=webp&quality=lossless&width=1052&height=662)
 ## Functionality
 
 1. **Data Collection:**
