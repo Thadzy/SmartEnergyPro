@@ -1,4 +1,4 @@
-# Electrical Energy Inspection Project
+# Smart Energy Pro
 
 ## Introduction
 
