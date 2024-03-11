@@ -1,79 +1,40 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Electrical Energy Inspection Project
 
-# Getting Started
+Introduction
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+This project aims to provide real-time monitoring of your electrical power consumption, helping you identify areas for energy conservation and potentially saving you money on your electricity bills.  It's inspired by the common concern of forgetting to turn off appliances, especially when rushing in the morning.
 
-## Step 1: Start the Metro Server
+Components
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+Arduino ESP32 (image: ): A powerful microcontroller board with built-in Wi-Fi and Bluetooth capabilities. It will be the heart of your project, collecting data from the PZEM-004T sensor and communicating with the cloud.
+Image of Arduino ESP32Opens in a new window
+store.arduino.cc
+Arduino ESP32
+PZEM-004T Sensor (image: ): This module measures various electrical parameters, including voltage, current, power, energy consumption (kWh), and frequency. It connects to the ESP32 and delivers the real-time data you need.
+Image of PZEM004T sensorOpens in a new window
+www.nn-digital.com
+PZEM004T sensor
+Functionality
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Data Collection:
 
-```bash
-# using npm
-npm start
+The ESP32 communicates with the PZEM-004T sensor to retrieve real-time readings of voltage, current, power, energy consumption (kWh), and frequency.
+Data Transmission:
 
-# OR using Yarn
-yarn start
-```
+The ESP32 transmits the collected data to a Google Sheet using the Sheety API. This allows you to easily access the data from any device with an internet connection.
+Mobile App (Future Development):
 
-## Step 2: Start your Application
+A mobile application built with React Native will be developed to fetch data from the Google Sheet using the Sheety API. This will provide a convenient way to view your real-time energy consumption on your smartphone.
+Future Enhancements
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Energy Consumption Prediction:
+Explore machine learning models to train on the collected data and predict future energy consumption. This can help you optimize your energy usage and potentially save even more.
+Automated Energy Saving Actions (Highly Experimental):
+Consider implementing automated actions based on the predicted consumption data. This could potentially involve turning off appliances when not in use (with proper safety precautions in mind). Caution: This is a very complex area with safety considerations and potential for unintended consequences. It's strongly recommended to exercise extreme caution and consult with a qualified electrician before attempting any automated control of appliances.
+Getting Started
 
-### For Android
+Detailed instructions on hardware setup, software configuration, and code examples will be provided in separate documentation (not included in this README.md).
 
-```bash
-# using npm
-npm run android
+Disclaimer
 
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+While the project promotes energy savings, automated control of appliances can be risky. Always prioritize safety and consult an electrician before implementing such mechanisms.
